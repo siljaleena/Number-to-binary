@@ -144,7 +144,7 @@ namespace Number_to_binary
                     //if the input was invalid, throws this exception
                     throw new FormatException("Invalid binary input.");
                 }
-                //initializes the 'decimalNumber' variable to store the result of the conversion
+                //initializes the 'decimalNumber' variable to store the decimal equivalent of the binary number
                 int decimalNumber = 0;
                 //sets 'binaryBase' to 2 because it's converting from binary to decimal
                 int binaryBase = 2;
