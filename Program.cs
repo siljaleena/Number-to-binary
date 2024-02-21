@@ -153,9 +153,10 @@ namespace Number_to_binary
                 //'binaryIndex' is the index of the current bit and 'powerOfTwo' is used to determine the position of the bit in the binary number
                 for (int binaryIndex = binaryNumber.Length - 1, powerOfTwo = 0; binaryIndex >= 0; binaryIndex--, powerOfTwo++)
                 {
-                    //'binaryDigit' is the integer value of the current binary digit at position 'i'
+                    //'binaryDigit' is assigned the integer value of the current binary digit at position 'binaryIndex'
                     int binaryDigit = int.Parse(binaryNumber[binaryIndex].ToString());
-                    //calculates the contribution of the current bit to the decimal number using the formula binaryDigit * 2^powerOfTwo and add it to the decimalNumber. 
+                    //calculates the contribution of the current bit to the decimal number using the formula binaryDigit * 2^powerOfTwo and add it to the decimalNumber.
+                    //'powerOfTwo' is added to keep track of the position of the bit in the binary number
                     decimalNumber += binaryDigit * (int)Math.Pow(binaryBase, powerOfTwo);
                 }
                 //when the loop completes this returns the final 'decimalNumber'
